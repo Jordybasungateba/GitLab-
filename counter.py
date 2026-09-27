@@ -3,6 +3,8 @@ import status
 
 app = Flask(__name__)
 COUNTERS = {}
+
+
 @app.route("/counter/<name>", methods=["POST"])
 def create_counter(name):
     app.logger.info(f"Creating counter: {name}")
