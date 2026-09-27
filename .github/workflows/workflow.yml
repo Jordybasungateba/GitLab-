@@ -21,9 +21,6 @@ jobs:
         run: |
           flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
           flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
-
-      - name: Exécuter des tests unitaires avec nose
-        run: nosetests -v --with-spec --spec-color --with-coverage --cover-package=
         
       - name: Exécuter les tests unitaires
         run: python -m unittest discover -v
